@@ -1,31 +1,63 @@
-<div class="post-page">
+<div class="post-creation-page">
   <div class="post-header">
-    <h2>Create New Post</h2>
-    <button class="btn primary" id="publish-post">Publish</button>
+    <button class="btn back-btn" id="back-button">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <h2>Create Post</h2>
+    <button class="btn primary" id="publish-post" disabled>Publish</button>
+  </div>
+  
+  <div class="author-section">
+    <div class="user-avatar">U</div>
+    <div class="author-details">
+      <h4>User Name</h4>
+      <div class="privacy-selector">
+        <select id="privacy-setting">
+          <option value="public"><i class="fas fa-globe-asia"></i> Public</option>
+          <option value="friends"><i class="fas fa-user-friends"></i> Friends</option>
+          <option value="only-me"><i class="fas fa-lock"></i> Only Me</option>
+        </select>
+      </div>
+    </div>
   </div>
   
   <div class="post-editor">
-    <textarea placeholder="What's on your mind?" maxlength="200"></textarea>
-    <div class="char-count">0/200</div>
-    
-    <div class="image-upload">
-      <h3>Add Photos (up to 8)</h3>
-      <div class="image-preview">
-        <div class="upload-placeholder">
-          <i class="fas fa-plus"></i>
-          <p>Add Image</p>
-        </div>
+    <textarea placeholder="What's on your mind?" maxlength="200" id="post-content"></textarea>
+    <div class="editor-actions">
+      <div class="char-count"><span id="char-counter">0</span>/200</div>
+      <div class="formatting-tools">
+        <button class="tool-btn" data-tool="bold"><i class="fas fa-bold"></i></button>
+        <button class="tool-btn" data-tool="italic"><i class="fas fa-italic"></i></button>
+        <button class="tool-btn" data-tool="emoji"><i class="far fa-smile"></i></button>
       </div>
-      <input type="file" multiple accept="image/*" style="display: none;" id="image-upload-input">
-    </div>
-    
-    <div class="privacy-settings">
-      <h3>Privacy</h3>
-      <select>
-        <option value="public">Public</option>
-        <option value="friends">Friends Only</option>
-        <option value="private">Only Me</option>
-      </select>
     </div>
   </div>
-</div>
+  
+  <div class="media-section">
+    <h3>Add Media <span class="media-count">(0/8)</span></h3>
+    
+    <div class="media-preview" id="media-preview">
+      <div class="upload-placeholder" id="upload-trigger">
+        <i class="fas fa-plus-circle"></i>
+        <p>Add Photos/Videos</p>
+      </div>
+    </div>
+    
+    <input type="file" multiple accept="image/*,video/*" id="media-upload-input" style="display: none;">
+  </div>
+  
+  <div class="additional-options">
+    <div class="option-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Add Location</span>
+    </div>
+    <div class="option-item">
+      <i class="fas fa-user-tag"></i>
+      <span>Tag Friends</span>
+    </div>
+    <div class="option-item">
+      <i class="fas fa-feeling"></i>
+      <span>Feeling/Activity</span>
+    </div>
+  </div>
+        </div>
