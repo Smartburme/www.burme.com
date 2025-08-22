@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Burme Chat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Burme Chat</h1>
+    <div class="user-profile">
+      <div class="user-avatar">U</div>
+    </div>
+  </header>
+
+  <main id="app-view" class="view">
+    <div class="page-placeholder">
+      <i class="fas fa-comments"></i>
+      <h2>Welcome to Burme Chat</h2>
+      <p>Connect with friends and join groups to start chatting. Select an option from the menu below to get started.</p>
+    </div>
+  </main>
+
+  <nav class="bottom-nav">
+    <button class="nav-btn active" data-route="home" aria-label="Home">
+      <span class="icon"><i class="fas fa-home"></i></span>
+      <span class="label">Home</span>
+    </button>
+    <button class="nav-btn" data-route="friends" aria-label="Friends">
+      <span class="icon"><i class="fas fa-user-friends"></i></span>
+      <span class="label">Friends</span>
+    </button>
+    <div class="float3d" data-route="new-chat">
+      <i class="fas fa-plus"></i>
+    </div>
+    <button class="nav-btn" data-route="group" aria-label="Group">
+      <span class="icon"><i class="fas fa-users"></i></span>
+      <span class="label">Group</span>
+    </button>
+    <button class="nav-btn" data-route="setting" aria-label="Setting">
+      <span class="icon"><i class="fas fa-cog"></i></span>
+      <span class="label">Setting</span>
+    </button>
+  </nav>
+
+  <script src="js/animation.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
