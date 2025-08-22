@@ -1,0 +1,136 @@
+.friends-page {
+  max-width: 100%;
+}
+
+.friends-header {
+  margin-bottom: 20px;
+}
+
+.friends-header h2 {
+  font-size: 1.5rem;
+  color: var(--dark);
+  margin-bottom: 15px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box i {
+  position: absolute;
+  left: 15px;
+  color: var(--gray);
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.friends-tabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray);
+  font-weight: 500;
+  position: relative;
+}
+
+.tab-btn.active {
+  color: var(--primary);
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+.friend-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+  box-shadow: var(--shadow);
+}
+
+.friend-info {
+  display: flex;
+  align-items: center;
+}
+
+.friend-info .user-avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  position: relative;
+}
+
+.friend-info .user-avatar.online::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background-color: var(--success);
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.friend-details h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.friend-details p {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.friend-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.friend-actions .icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.friend-actions .chat-btn:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.friend-actions .call-btn:hover {
+  background-color: var(--success);
+  color: white;
+}
